@@ -1,0 +1,25 @@
+#@valuePriority,false
+#@literalQuotes,false
+#@strictMode,false
+
+# Place packages you would like to install here, installed packages not here are
+# either system packages like `linux` (found at $NEST_GEN_ROOT/systempkgs.scsv)
+# or are installed imperatively through `nest install` (found at /usr/bin/ only).
+
+# Core packages
+|core,
+
+# Extra packages
+|extra,bat
+,eza
+,zoxide
+,fzf
+,fish
+,ripgrep
+,btop
+
+# Multilib packages
+|multilib,
+
+# AUR packages
+|aur,
