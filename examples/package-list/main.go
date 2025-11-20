@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	path := "./pkglist.scsv"
+	path := "../pkglist.scsv"
 	scsvMap, err := scsv.ParseFile(path)
 	if err != nil {
 		fmt.Println(err)
@@ -16,7 +16,11 @@ func main() {
 	}
 
 	for repo, pkgs := range scsvMap {
-		fmt.Printf("\n%s:\n", repo)
+		if len(pkgs) <= 1 {
+			continue
+		}
+
+		fmt.Printf("%s:\n", repo)
 
 		for _, pkg := range pkgs {
 			fmt.Printf(" - %s\n", pkg)
