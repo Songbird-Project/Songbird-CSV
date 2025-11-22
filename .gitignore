@@ -26,3 +26,9 @@ go.work.sum
 
 # env file
 .env
+
+# new iterations
+new/
+
+# backup files
+*.bak
